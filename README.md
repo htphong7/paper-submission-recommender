@@ -1,6 +1,6 @@
 # An Efficient Scientific Submission Recommendation System for Computer Science
 
-Our paper can be found  at 
+Our paper "S2RSCS: An Efficient Scientific Submission Recommendation System for Computer Science" has been accepted at the conference IEAAEI 2020 in Japan.
 
 In this paper, we have researched the Recommendation System that can predict which journals fit with your paper. We use the dataset of authors in this paper 
 

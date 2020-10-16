@@ -82,17 +82,17 @@
         </div>
     </div>
     <div class="row col-8 align-self-center rounded" style="background-color: #1a6381; padding:20px">
-        <form action="./Predict" method="POST">
+        <form class="container row col-md-12 text-center rounded mb-auto" action="./Predict" method="POST">
             <div class="col-6">
                 <div class="form-group" style="text-align: left;">
                     <h5 style="color:white;">Title</h5>
                     <textarea id="title" name="title" class="form-control"
-                              placeholder="Please input the title of your work here"></textarea>
+                              placeholder="Please input the title of your work here">{{ title }}</textarea>
                 </div>
                 <div class="form-group" style="padding-top: 0px; text-align: left;">
                     <h5 style="color:white;">Keyword</h5>
                     <textarea id="keyword" name="keyword" class="form-control"
-                              placeholder="Please input list keywords of your work here"></textarea>
+                              placeholder="Please input list keywords of your work here">{{ keyword }}</textarea>
                 </div>
             </div>
             <div class="col-6">
@@ -102,7 +102,7 @@
                     </div>
                     <textarea id="abstract" name="abstract" class="form-control"
                               placeholder="Please input the abtract of your work here"
-                              style="height: 210px;"></textarea>
+                              style="height: 210px;">{{ abstract }}</textarea>
                 </div>
             </div>
             <div class="col-md-8 align-self-center">
@@ -112,13 +112,72 @@
             </div>
             <div class="col-md-4 align-self-center">
                 <button type="button" class="btn btn-block btn-large btn-warning" style="color: white;"
-                        onclick="document.getElementById('title').value = ''; document.getElementById('keyword').value = ''; document.getElementById('abstract').value = ''">
+                        onclick="document.getElementById('content').innerHTML = ''; document.getElementById('title').value = ''; document.getElementById('keyword').value = ''; document.getElementById('abstract').value = ''">
                     Reset
                 </button>
             </div>
         </form>
     </div>
 </div>
+
+<!-- CONTENT -->
+<div id="content" class="row col-12 rounded"
+     style="background-color: white; margin-left: 0px;, padding: 30px; margin-top:20px; margin-bottom:20px;">
+    <div class="container col-3 rounded content">
+
+    </div>
+    <div id="jar" class="container offset-1 col-8">
+        <h3 style="color: #227aa0; text-align: center; padding-top:10px;"><i> Top Recommendations </i></h3>
+        <div class="row col-12 rounded content">
+
+            <h5 class="col-12"><a>1.{{ content0 }}</a></h5>
+            <div class="col-12">
+                <p>predicted value: {{ score0 }}</p>
+            </div>
+        </div>
+
+        <div class="row col-12 rounded content">
+
+            <h5 class="col-12"><a>2.{{ content1 }}</a></h5>
+            <div class="col-12">
+                <p>predicted value: {{ score1 }}</p>
+            </div>
+        </div>
+
+        <div class="row col-12 rounded content">
+
+            <h5 class="col-12"><a>3.{{ content2 }}</a></h5>
+            <div class="col-12">
+                <p>predicted value: {{ score2 }}</p>
+            </div>
+        </div>
+
+        <div class="row col-12 rounded content">
+
+            <h5 class="col-12"><a>4.{{ content3 }}</a></h5>
+            <div class="col-12">
+                <p>predicted value: {{ score3 }}</p>
+            </div>
+        </div>
+
+        <div class="row col-12 rounded content">
+
+            <h5 class="col-12"><a>5.{{ content4 }}</a></h5>
+            <div class="col-12">
+                <p>predicted value: {{ score4 }}</p>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="col-12 text-center">
+        <nav>
+            <ul class="pagination justify-content-center pagination-sm">
+            </ul>
+        </nav>
+    </div>
+</div>
+
 <!-- Footer -->
 <section id="footer">
     <div class="row bg-dark rounded">
